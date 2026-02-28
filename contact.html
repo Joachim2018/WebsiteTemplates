@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact WebTemplates - Get in touch with us for inquiries about our web templates and services.">
+    <meta name="keywords" content="contact, web templates, support, inquiry">
+    <meta name="author" content="WebTemplates Team">
+    <meta property="og:title" content="Contact Us - WebTemplates">
+    <meta property="og:description" content="Have questions? Reach out to our team for support and inquiries.">
+    <meta property="og:type" content="website">
+    <title>Contact Us | WebTemplates</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional styles specific to contact page */
+        .contact-page {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+
+        .contact-form-container {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .contact-form-container h1 {
+            color: var(--gray-900);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .contact-form-container .subtitle {
+            text-align: center;
+            color: var(--gray-500);
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--gray-700);
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid var(--gray-200);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: var(--transition);
+            background: var(--white);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-group .required {
+            color: #dc2626;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 1rem 2rem;
+            background: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-submit:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .alternative-contact {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-200);
+            text-align: center;
+        }
+
+        .alternative-contact h3 {
+            color: var(--gray-900);
+            margin-bottom: 1rem;
+        }
+
+        .contact-options {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-option {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--gray-100);
+            border-radius: 50px;
+            text-decoration: none;
+            color: var(--gray-700);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .contact-option:hover {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .contact-option.whatsapp {
+            background: #25D366;
+            color: var(--white);
+        }
+
+        .contact-option.whatsapp:hover {
+            background: #128C7E;
+        }
+
+        .form-success {
+            display: none;
+            background: #D1FAE5;
+            color: #065F46;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .form-success.show {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .contact-form-container {
+                padding: 1.5rem;
+            }
+
+            .contact-options {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Search -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">WebTemplates</a>
+            <div class="search-container">
+                <input type="text" placeholder="Search templates..." aria-label="Search templates">
+                <button type="button" aria-label="Search">
+                    <span>🔍</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Form Section -->
+    <main class="contact-page">
+        <div class="contact-form-container">
+            <h1>Get in Touch</h1>
+            <p class="subtitle">Have questions about our templates? We'd love to hear from you!</p>
+
+            <!-- Success Message -->
+            <div class="form-success" id="successMessage">
+                Thank you for your message! We'll get back to you soon.
+            </div>
+
+            <!-- Contact Form -->
+            <form id="contactForm" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject <span class="required">*</span></label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Select a subject</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="template">Template Question</option>
+                        <option value="support">Technical Support</option>
+                        <option value="business">Business Inquiry</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message <span class="required">*</span></label>
+                    <textarea id="message" name="message" placeholder="Tell us how we can help you..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+
+            <!-- Alternative Contact Options -->
+            <div class="alternative-contact">
+                <h3>Other Ways to Reach Us</h3>
+                <div class="contact-options">
+                    <!-- <a href="mailto:support@webtemplates.com" class="contact-option">
+                        <span>📧</span> support@webtemplates.com
+                    </a> -->
+                    <a href="https://wa.me/+2560777354391?text=Hello! I need help with web templates." class="contact-option whatsapp" target="_blank" rel="noopener noreferrer">
+                        <span>💬</span> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 WebTemplates. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Contact Form Handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            const successMessage = document.getElementById('successMessage');
+
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+
+                    // Get form data
+                    const formData = new FormData(form);
+                    const data = Object.fromEntries(formData.entries());
+
+                    // Simple validation
+                    if (!data.name || !data.email || !data.subject || !data.message) {
+                        alert('Please fill in all required fields.');
+                        return;
+                    }
+
+                    // Email validation
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(data.email)) {
+                        alert('Please enter a valid email address.');
+                        return;
+                    }
+
+                    // Show success message (in production, you'd send data to server)
+                    successMessage.classList.add('show');
+                    form.reset();
+
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                        successMessage.classList.remove('show');
+                    }, 5000);
+                });
+            }
+
+            // Initialize search functionality from main script
+            if (typeof initSearch === 'function') {
+                initSearch();
+            }
+        });
+    </script>
+</body>
+</html>

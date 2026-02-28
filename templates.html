@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse our collection of professional website templates. Business, portfolio, e-commerce and more templates available for download.">
+    <meta name="keywords" content="website templates, web templates, business templates, portfolio templates, ecommerce templates">
+    <meta name="author" content="WebTemplates Team">
+    <meta property="og:title" content="Browse Templates - WebTemplates">
+    <meta property="og:description" content="Explore our collection of professional website templates for all industries.">
+    <meta property="og:type" content="website">
+    <title>Browse Templates | WebTemplates</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional styles for templates page */
+        .templates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .template-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .template-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .template-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background: var(--gray-200);
+        }
+
+        .template-card .card-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .template-card h3 {
+            color: var(--gray-900);
+            font-size: 1.4rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .template-card .category {
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            width: fit-content;
+        }
+
+        .template-card p {
+            color: var(--gray-500);
+            font-size: 0.95rem;
+            margin-bottom: 1.25rem;
+            flex: 1;
+        }
+
+        .template-card .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid var(--gray-200);
+            margin-top: auto;
+        }
+
+        .template-card .price {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+
+        .template-card .price.free {
+            color: var(--primary-color);
+        }
+
+        .template-card .btn-group {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .template-card a {
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .template-card a:first-of-type {
+            background: var(--gray-100);
+            color: var(--gray-700);
+        }
+
+        .template-card a:first-of-type:hover {
+            background: var(--gray-200);
+        }
+
+        .template-card a:last-of-type {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .template-card a:last-of-type:hover {
+            background: var(--primary-dark);
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: var(--white);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .templates-section {
+            padding: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .templates-grid {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Search -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">WebTemplates</a>
+            <div class="search-container">
+                <input type="text" placeholder="Search templates..." aria-label="Search templates">
+                <button type="button" aria-label="Search">
+                    <span>🔍</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1>Browse Our Templates</h1>
+        <p>Discover professionally designed templates for your next project. All templates are responsive and easy to customize.</p>
+    </div>
+
+    <!-- Templates Grid -->
+    <section class="templates-section">
+        <h2>Our Templates</h2>
+        <div class="templates-grid">
+            <!-- Template Card 1 -->
+            <article class="template-card">
+                <img src="https://via.placeholder.com/400x220/2563eb/ffffff?text=Business+Template" alt="Business Template Preview">
+                <div class="card-content">
+                    <span class="category">Business</span>
+                    <h3>Business Corporate</h3>
+                    <p>A professional template designed for businesses of all sizes. Features clean layout, responsive design, and customizable sections.</p>
+                    <div class="card-footer">
+                        <span class="price free">Free</span>
+                        <div class="btn-group">
+                            <a href="#">Preview</a>
+                            <a href="/VoltaTech.zip" download>Download</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Template Card 2 -->
+            <article class="template-card">
+                <img src="https://via.placeholder.com/400x220/10b981/ffffff?text=Portfolio+Template" alt="Portfolio Template Preview">
+                <div class="card-content">
+                    <span class="category">Portfolio</span>
+                    <h3>Creative Portfolio</h3>
+                    <p>Showcase your work with this stunning portfolio template. Perfect for designers, photographers, and creative professionals.</p>
+                    <div class="card-footer">
+                        <span class="price">$29</span>
+                        <div class="btn-group">
+                            <a href="#">Preview</a>
+                            <a href="#">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Template Card 3 -->
+            <article class="template-card">
+                <img src="https://via.placeholder.com/400x220/7c3aed/ffffff?text=E-Commerce" alt="E-Commerce Template Preview">
+                <div class="card-content">
+                    <span class="category">E-Commerce</span>
+                    <h3>Online Store</h3>
+                    <p>Build your online shop with this feature-rich e-commerce template. Includes product grids, cart functionality, and checkout pages.</p>
+                    <div class="card-footer">
+                        <span class="price">$49</span>
+                        <div class="btn-group">
+                            <a href="#">Preview</a>
+                            <a href="#">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Template Card 4 -->
+            <article class="template-card">
+                <img src="https://via.placeholder.com/400x220/f59e0b/ffffff?text=Restaurant" alt="Restaurant Template Preview">
+                <div class="card-content">
+                    <span class="category">Restaurant</span>
+                    <h3>Restaurant & Cafe</h3>
+                    <p>Beautiful template for restaurants, cafes, and food businesses. Includes menu sections, reservations, and gallery features.</p>
+                    <div class="card-footer">
+                        <span class="price">$39</span>
+                        <div class="btn-group">
+                            <a href="#">Preview</a>
+                            <a href="#">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Template Card 5 -->
+            <article class="template-card">
+                <img src="https://via.placeholder.com/400x220/ef4444/ffffff?text=Blog+Template" alt="Blog Template Preview">
+                <div class="card-content">
+                    <span class="category">Blog</span>
+                    <h3>Personal Blog</h3>
+                    <p>Clean and modern blog template perfect for content creators, writers, and journalists. Optimized for reading experience.</p>
+                    <div class="card-footer">
+                        <span class="price free">Free</span>
+                        <div class="btn-group">
+                            <a href="#">Preview</a>
+                            <a href="#">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Template Card 6 -->
+            <article class="template-card">
+                <img src="https://via.placeholder.com/400x220/06b6d4/ffffff?text=Education" alt="Education Template Preview">
+                <div class="card-content">
+                    <span class="category">Education</span>
+                    <h3>Online Courses</h3>
+                    <p>Create an engaging learning platform with this education template. Features course listings, student profiles, and video lessons.</p>
+                    <div class="card-footer">
+                        <span class="price">$59</span>
+                        <div class="btn-group">
+                            <a href="#">Preview</a>
+                            <a href="#">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Need Help Choosing?</h2>
+        <p>Our team is here to help you find the perfect template for your project.</p>
+        <div class="btn-group">
+            <a href="contact.html">Contact Us</a>
+            <a href="https://wa.me/1234567890?text=Hello! I need help choosing a template." class="whatsapp" target="_blank" rel="noopener noreferrer">
+                WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 WebTemplates. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
